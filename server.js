@@ -33,6 +33,10 @@ app.post('/api/upload', async (req, res) => {
 	}
 });
 
+app.get('/', (req, res) => {
+	res.status(200).json({ msg: 'Hello World' });
+});
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
 	console.log(`Server started on port ${port}`);
